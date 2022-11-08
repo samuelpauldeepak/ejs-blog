@@ -1,0 +1,10 @@
+<%- include("partials/header"); -%>
+<h1>Home</h1>
+<p><%= Content%></p>
+<h4><%=compose_content%></h4>
+<% postData.forEach(function(data){ %>
+<h1> <%=data.title %></h1>
+<p><%= data.content.substring(0,100)%>...<a href="/post/<%=data._id %>">Read More</a></p>
+
+<%}); %>
+<%- include("partials/footer"); -%>
